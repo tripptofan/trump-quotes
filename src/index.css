@@ -15,7 +15,18 @@ body {
   width: 100vw;
   height: 100vh;
 }
-
+body {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: rgb(250, 176, 224);
+  background: linear-gradient(
+    180deg,
+    rgba(250, 176, 224, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
 div,
 p,
 a,

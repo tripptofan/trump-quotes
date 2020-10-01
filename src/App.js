@@ -27,9 +27,14 @@ function App() {
       .then(res => {
         setTrumpPic(trumpHeads[randomNum]);
         setQuote(res.data);
+        picMover(trumpPic);
       })
   };
+const picMover = () => {
+  document.getElementById('pic').classList.toggle('active');
+  document.getElementById('arrow-down').classList.toggle('active');
 
+}
 
 
   return (
@@ -40,12 +45,16 @@ function App() {
 
 <div className='quoteContainer'>
 <p>{quote && quote.message}</p>
+<div id="arrow-down"></div>
 </div>
 
-<div className='imgArea'>
+
  <img id='pic' src={trumpPic} alt='Donald Trump'/> 
-</div>
+
+<div className='buttonContainer'>
 <button className='randomQuote' onClick={() => newQuote()}>Random Quote</button>
+</div>
+
     </div>
   );
 }
